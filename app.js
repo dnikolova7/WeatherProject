@@ -16,10 +16,10 @@ app.get("/", function(req, res){
 
 app.post ("/", function(req, res){
    
-const query = req.body.cityName;
-const apiKey = "b813ad9ec2d7b9fb72fcfd6c0804416a";
+    const query = req.body.cityName;
+    const apiKey = "b813ad9ec2d7b9fb72fcfd6c0804416a";
 // const units = "Celsius";
-const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=metric";
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=metric";
 // let settings = { method: "Get" };
 
 // fetch(url, settings)
@@ -29,8 +29,8 @@ const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&app
     // do something with JSON
 // });
 
-https.get(url, function(response){
-    console.log(response.statusCode);
+    https.get(url, function(response){
+        console.log(response.statusCode);
 
     response.on("data", function(data){
         const weatherData = JSON.parse(data);
